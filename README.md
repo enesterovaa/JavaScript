@@ -214,3 +214,31 @@
     checkAge(18)
     checkAge(true)
     checkAge([1,2,3])
+
+### 4*** Преобразовать задание 3* таким образом, чтобы возраст вводился, используя функцию prompt в привязанной верстке. ###
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const age = prompt("How old are you?") 
+    if (isNaN(age) || age <= 0) {
+        alert("Invalid data")
+    }
+    else if (age < 18) {
+        alert("You don't have access cause your age is " + age + ". It's less than 18.");
+    }
+    else if (age >= 18 && age <= 60) {
+        alert("Welcome!");
+    }
+    else if (age > 60 ){
+        alert("Keep calm and look Culture channel");
+    }
+    else {
+        alert("Technical work");
+    }	
+    </script>
+  </head>
+    <body>
+    </body> 
+</html>
