@@ -50,20 +50,23 @@ funnyNumber(0)
 //в таких случаях вывести в чем ошибка ввода
 
 function funnyNumber(y) {
- if ((y == 0) || (y < 0)) {
-    console.log("Введенное число должно быть больше нуля.")
+ if (typeof y != 'number') {
+  console.log("Нужно вводить число.")
+ }
+ else if ((y == 0) || (y < 0)) {
+    console.log("Нужно вводить число больше нуля.")
   }
   else if ((y % 5 === 0) && (y % 11 === 0)) {
-    console.log(y + " делится и на 5, и на 11")  
+    console.log(y + " делится и на 5, и на 11.")  
   }
   else if (y % 5 == 0) {
-    console.log(y + " делится на 5")
+    console.log(y + " делится на 5.")
   }
   else if (y % 11 == 0) {
-    console.log(y + " делится на 11")   
+    console.log(y + " делится на 11.")   
   }
   else {
-    console.log(y + " - скучное число")
+    console.log(y + " - скучное число.")
   }
   }
 
@@ -71,4 +74,8 @@ funnyNumber(0)
 funnyNumber(10)
 funnyNumber(33)
 funnyNumber(55)
-funnyNumber(12)
+funnyNumber('45')
+funnyNumber(true)
+funnyNumber("ggg")
+funnyNumber(-5)
+funnyNumber([1,2,3])
